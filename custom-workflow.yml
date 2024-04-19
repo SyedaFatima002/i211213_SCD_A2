@@ -1,0 +1,19 @@
+name: Custom Workflow - Generate Release Notes
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  generate-release-notes:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Generate Release Notes
+        run: |
+          # Add commands to generate release notes
+          echo "Generating release notes..."
