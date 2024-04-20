@@ -18,8 +18,9 @@ jobs:
       
       # Example: Backup data
       - name: Backup data
-        run: #./scripts/backup_data.sh
-            echo "backing up data"
+        run: 
+          #./scripts/backup_data.sh
+          echo "backing up data"
       # Add any other scheduled tasks here
 
       # Example: Send notification
