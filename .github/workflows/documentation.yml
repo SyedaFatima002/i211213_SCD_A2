@@ -1,0 +1,29 @@
+name: Documentation Deployment
+
+on:
+  push:
+    paths:
+      - 'docs/**' # Trigger on changes to documentation files
+
+jobs:
+  deploy_docs:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      
+      # Add steps to build documentation from source files
+      # Example:
+      - name: Build documentation
+        run: #npm run build-docs
+            echo "building docs"
+
+      # Add steps to deploy documentation to hosting platform
+      # Example:
+      - name: Deploy documentation
+        run: "deploying documentation"
+        #uses: peaceiris/actions-gh-pages@v3
+        #with:
+        #  github_token: ${{ secrets.GITHUB_TOKEN }}
+        #  publish_dir: ./docs

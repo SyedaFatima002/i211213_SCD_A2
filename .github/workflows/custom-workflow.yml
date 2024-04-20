@@ -1,0 +1,18 @@
+name: Custom Workflow Integration
+
+on:
+  push:
+    branches:
+      - main # Trigger on changes to the main branch
+
+jobs:
+  custom_workflow:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      
+      - name: Generate release notes
+        run: #npm run generate-release-notes
+            echo "generating release notes"
