@@ -21,7 +21,7 @@ jobs:
         run: npm install
 
       - name: Check for dependency updates
-        uses: dependabot/dependabot-core@v0.163.x
+        #uses: dependabot/dependabot-core@v0.163.x
         run: echo "checking for updates using dependabot"
         #with:
         #  github-token: ${{ secrets.GITHUB_TOKEN }}
