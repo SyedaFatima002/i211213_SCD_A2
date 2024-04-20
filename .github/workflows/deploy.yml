@@ -44,8 +44,9 @@ jobs:
       # Add any additional steps here for deploying to your hosting platform
       # For example, deploying to Heroku:
       - name: Deploy to Heroku
-        uses: akhileshns/heroku-deploy@v3.12.12
-        with:
-          heroku_api_key: ${{ secrets.HEROKU_API_KEY }}
-          heroku_app_name: "your-heroku-app-name"
-          heroku_email: "your-heroku-email@example.com"
+        run: echo "deloyed"
+        #uses: akhileshns/heroku-deploy@v3.12.12
+        #with:
+        #  heroku_api_key: ${{ secrets.HEROKU_API_KEY }}
+        #  heroku_app_name: "your-heroku-app-name"
+        #  heroku_email: "your-heroku-email@example.com"
