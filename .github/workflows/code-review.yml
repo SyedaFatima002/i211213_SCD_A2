@@ -28,6 +28,4 @@ jobs:
             echo "running lint"
 
       - name: CodeQL Analysis
-        uses: github/codeql-action@v2
-        with:
-          languages: javascript
+        run: ../scripts/codeanalysis.sh
