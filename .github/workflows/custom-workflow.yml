@@ -17,6 +17,9 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: '20'
+
+      - name: Set execute permissions for releasenotes.sh
+        run: chmod +x scripts/releasenotes.sh
       
       - name: Generate release notes
         working-directory: scripts # Navigate to the scripts directory
