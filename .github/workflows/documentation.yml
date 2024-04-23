@@ -11,7 +11,7 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v2 
       
       - name: Use Node.js 20
         uses: actions/setup-node@v2
@@ -22,8 +22,12 @@ jobs:
         run: #npm run build-docs
             echo "building docs"
 
-      - name: Deploy documentation
-        run:  ./scripts/deployingdocs.sh
+       - name: Set execute permissions for releasenotes.sh
+        run: chmod +x scripts/releasenotes.sh
+      
+      - name:  Deploy documentation
+        working-directory: scripts # Navigate to the scripts directory
+        run: ./deployingdocs.sh
         #uses: peaceiris/actions-gh-pages@v3
         #with:
         #  github_token: ${{ secrets.GITHUB_TOKEN }}

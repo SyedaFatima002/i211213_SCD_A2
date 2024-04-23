@@ -19,12 +19,20 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: '20'
+
+      - name: Set execute permissions 
+        run: chmod +x scripts/run_maintenance.sh
+
+       - name: Set execute permissions for backup_data.sh 
+        run: chmod +x scripts/backup_data.sh
       
       - name: Run maintenance script
-        run: ./scripts/run_maintenance.sh
+        working-directory: scripts # Navigate to the scripts directory
+        run: ./run_maintenance.sh
+      
+       - name: Backup data
+        working-directory: scripts # Navigate to the scripts directory
+        run: ./backup_data.sh
 
-      - name: Backup data
-        run: ./scripts/backup_data.sh
-        
       - name: Send notification
         run: echo "Scheduled tasks completed successfully"

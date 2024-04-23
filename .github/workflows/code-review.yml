@@ -19,7 +19,7 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: '20'
-
+ 
       - name: Install dependencies
         run: npm install
 
@@ -27,5 +27,9 @@ jobs:
         run: #npm run lint
             echo "running lint"
 
+      - name: Set execute permissions for codeanalysis.sh
+        run: chmod +x scripts/codeanalysis.sh
+      
       - name: CodeQL Analysis
-        run: ./scripts/codeanalysis.sh
+        working-directory: scripts # Navigate to the scripts directory
+        run: ./codeanalysis.sh
