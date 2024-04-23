@@ -30,7 +30,7 @@ jobs:
         working-directory: scripts # Navigate to the scripts directory
         run: ./run_maintenance.sh
       
-       - name: Backup data
+      - name: Backup data
         working-directory: scripts # Navigate to the scripts directory
         run: ./backup_data.sh
 
