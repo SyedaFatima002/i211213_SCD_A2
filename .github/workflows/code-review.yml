@@ -28,4 +28,4 @@ jobs:
             echo "running lint"
 
       - name: CodeQL Analysis
-        run: ../scripts/codeanalysis.sh
+        run: ./scripts/codeanalysis.sh
