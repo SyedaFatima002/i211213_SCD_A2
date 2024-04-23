@@ -19,4 +19,4 @@ jobs:
           node-version: '20'
       
       - name: Generate release notes
-        run: ../scripts/generatingreleasenotes.sh
+        run: ./scripts/releasenotes.sh

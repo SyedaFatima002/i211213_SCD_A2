@@ -21,10 +21,10 @@ jobs:
           node-version: '20'
       
       - name: Run maintenance script
-        run: ../scripts/run_maintenance.sh
+        run: ./scripts/run_maintenance.sh
 
       - name: Backup data
-        run: ../scripts/backup_data.sh
+        run: ./scripts/backup_data.sh
         
       - name: Send notification
         run: echo "Scheduled tasks completed successfully"

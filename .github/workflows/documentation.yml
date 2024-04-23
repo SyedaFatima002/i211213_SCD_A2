@@ -23,7 +23,7 @@ jobs:
             echo "building docs"
 
       - name: Deploy documentation
-        run:  ../scripts/deployingdocs.sh
+        run:  ./scripts/deployingdocs.sh
         #uses: peaceiris/actions-gh-pages@v3
         #with:
         #  github_token: ${{ secrets.GITHUB_TOKEN }}
