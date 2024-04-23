@@ -1,8 +1,11 @@
 name: Scheduled Tasks
 
 on:
-  schedule:
-    - cron: '0 0 * * *'  # Runs daily at midnight UTC
+  #schedule:
+  #  - cron: '0 0 * * *'  # Runs daily at midnight UTC
+  push:
+    branches:
+      - main
 
 jobs:
   run_tasks:
@@ -12,17 +15,11 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
       
-      # Example: Run a maintenance script
       - name: Run maintenance script
-        run: ./scripts/run_maintenance.sh
-      
-      # Example: Backup data
-      - name: Backup data
-        run: 
-          #./scripts/backup_data.sh
-          echo "backing up data"
-      # Add any other scheduled tasks here
+        run: ../scripts/run_maintenance.sh
 
-      # Example: Send notification
+      - name: Backup data
+        run: ../scripts/backup_data.sh
+        
       - name: Send notification
         run: echo "Scheduled tasks completed successfully"

@@ -2,8 +2,8 @@ name: Documentation Deployment
 
 on:
   push:
-    paths:
-      - 'docs/**' # Trigger on changes to documentation files
+    branches:
+      - main
 
 jobs:
   deploy_docs:
@@ -13,14 +13,10 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
       
-      # Add steps to build documentation from source files
-      # Example:
       - name: Build documentation
         run: #npm run build-docs
             echo "building docs"
 
-      # Add steps to deploy documentation to hosting platform
-      # Example:
       - name: Deploy documentation
         run: "deploying documentation"
         #uses: peaceiris/actions-gh-pages@v3

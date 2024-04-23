@@ -14,5 +14,4 @@ jobs:
         uses: actions/checkout@v2
       
       - name: Generate release notes
-        run: #npm run generate-release-notes
-            echo "generating release notes"
+        run: ../scripts/generatingreleasenotes.sh

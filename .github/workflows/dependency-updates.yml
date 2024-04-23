@@ -1,8 +1,11 @@
 name: Dependency Updates
 
 on:
-  schedule:
-    - cron: '0 0 * * *' # Run daily
+  #schedule:
+  #  - cron: '0 0 * * *' # Run daily
+  push:
+    branches:
+      - main
 
 jobs:
   dependency_updates:
