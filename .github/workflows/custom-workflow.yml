@@ -19,4 +19,5 @@ jobs:
           node-version: '20'
       
       - name: Generate release notes
-        run: ./scripts/releasenotes.sh
+        working-directory: scripts # Navigate to the scripts directory
+        run: ./releasenotes.sh
