@@ -23,7 +23,7 @@ jobs:
       - name: Set execute permissions 
         run: chmod +x scripts/run_maintenance.sh
 
-       - name: Set execute permissions for backup_data.sh 
+      - name: Set execute permissions for backup_data.sh 
         run: chmod +x scripts/backup_data.sh
       
       - name: Run maintenance script

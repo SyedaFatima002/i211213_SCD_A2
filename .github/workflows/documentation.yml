@@ -22,8 +22,8 @@ jobs:
         run: #npm run build-docs
             echo "building docs"
 
-       - name: Set execute permissions for releasenotes.sh
-        run: chmod +x scripts/releasenotes.sh
+      - name: Set execute permissions for deployingdocs.sh
+        run: chmod +x scripts/deployingdocs.sh
       
       - name:  Deploy documentation
         working-directory: scripts # Navigate to the scripts directory
